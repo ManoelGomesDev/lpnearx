@@ -33,13 +33,16 @@ const config: Config = {
         bgLight: "#272C37",
         bgNetraul: "rgba(255, 255, 255, 0.05)",
         bgCard: "#25232E",
+        bgCourseCardTO: "#2E2E2E",
+        bgCourseCardFrom: "rgba(74, 61, 95, 0.20)",
         borderCard: "#363752",
         
 
 
         text: {
           default: "#EEE",
-          gray: "#BCBCBC",
+          netraul: "#BCBCBC",
+          fontInfo: "#BABABA"
         },
       },
     },

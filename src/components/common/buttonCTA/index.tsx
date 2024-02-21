@@ -1,5 +1,10 @@
-export const ButtonCTA = () => {
+
+interface ButtonCTAProps {
+    btnName: string
+}
+
+export const ButtonCTA = ({btnName}: ButtonCTAProps) => {
     return (
-        <button className="w-[280px] laptop:w-[403px] h-[92px] bg-primary-default hover:bg-primary-hover font-bold text-white text-xl rounded-md -mt-[82px]">QUERO ME INSCREVER</button>
+        <button className="w-[280px] h-[55px] laptop:h-[65px] bg-primary-default hover:bg-primary-hover font-bold text-white laptop:text-xl text-sm rounded-md ">{btnName}</button>
     )
 }
