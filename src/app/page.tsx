@@ -12,6 +12,26 @@ import lucasAvatar from "../../public/assets/lucasAvatar.png";
 import afonsoAvatar from "../../public/assets/afonsoAvatar.png";
 import alexandreAvatar from "../../public/assets/alexandreAvatar.png";
 import caioAvatar from "../../public/assets/caioAvatar.png";
+import vitorAvatar from "../../public/assets/vitorAvatar.png";
+
+import mentoria from "../../public/assets/mentoria.png";
+import cursos from "../../public/assets/cursos.png";
+import suporte from "../../public/assets/suporte.png";
+import comunidade from "../../public/assets/comunidade.png";
+import metodologia from "../../public/assets/metodologia.png";
+import mercado from "../../public/assets/mercadoTrabalho.png";
+import selo from "../../public/assets/selo.png";
+
+import openai from "../../public/assets/openai.png"
+import ethereum from "../../public/assets/ethereum.png"
+import polygon from "../../public/assets/polygon.png"
+import optism from "../../public/assets/optism.png"
+import binance from "../../public/assets/binance.png"
+import inovabra from "../../public/assets/inovabra.png"
+import solana from "../../public/assets/solana.png"
+import icp from "../../public/assets/icp.png"
+
+import { CardMethodology } from "@/components/common/cardMethodology";
 
 export default function Home() {
   return (
@@ -108,6 +128,165 @@ export default function Home() {
                 lastNameProf="Pedro Magalhões"
               />
             </div>
+          </div>
+        </div>
+        <div id="section-ia" className="flex flex-col items-center">
+          <div className="flex flex-col py-10 gap-8 laptop:gap-12 items-center">
+            <Tag text="Trilha 2" />
+            <div className="flex flex-col items-center gap-8">
+              <h2 className="text-white font-bold text-3xl laptop:text-4xl macair:text-5xl">
+                Inteligência Artificial
+              </h2>
+              <p className="text-text-netraul text-center w-[300px]">
+                Domine a Inteligência Artificial e monetize seu conhecimento na
+                era digital.
+              </p>
+            </div>
+            <div className="flex flex-col items-center gap-8 laptop:flex-row">
+              <CardSmall
+                font="fonte: glassdoor.com"
+                info="R$10.744/mês"
+                title="MÉDIA SALARIAL BRASIL"
+              />
+              <CardSmall
+                font="fonte: web3career.com"
+                info="R$46.600/mês"
+                title="MÉDIA SALARIAL EXTERIOR"
+              />
+              <ButtonCTA btnName="Assinar agora" />
+            </div>
+            <div className="flex flex-col laptop:gap-14 gap-8">
+              <CourseCard
+                nameTag="Curso 1"
+                title="Aplicativos em IA"
+                text1="Neste curso, você irá aprender a construir um aplicativo inovador que simplifica e transforma a interação com documentos."
+                text2="O melhor de tudo? Você fará isso usando soluções no-code, uma abordagem que elimina as barreiras técnicas, permitindo que qualquer pessoa, independentemente de sua experiência em programação."
+                imgAvatar={[vitorAvatar]}
+                penultimateNameProf="Vitor Romão"
+                onlyOneName
+              />
+              <CourseCard
+                nameTag="Curso 2"
+                title="IA para empreendedores"
+                text1="Seja pioneiro na integração da IA no coração do seu negócio. Aprenda como a Inteligência Artificial pode ser o diferencial competitivo que todo empreendedor busca. "
+                text2="Aprimore suas operações, inove em seus produtos e acelere o crescimento com as soluções que a IA proporciona."
+                imgAvatar={[alexandreAvatar]}
+                penultimateNameProf="Alexandre Messina"
+                onlyOneName
+              />
+              <CourseCard
+                nameTag="Curso 3"
+                title="Programação em Python"
+                text1="Este curso é uma jornada prática para iniciantes e entusiastas, proporcionando uma introdução sólida à programação em Python. "
+                text2="Desde os fundamentos até conceitos mais avançados, os participantes irão explorar tópicos fundamentais para quem deseja desenvolver projetos em Python e trabalhar posteriormente com Inteligência Artificial (IA)"
+                imgAvatar={[lucasAvatar]}
+                penultimateNameProf="Lucas Oliveira"
+                onlyOneName
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          id="methods"
+          className="bg-black flex flex-col items-center  py-14 laptop:py-24"
+        >
+          <h3 className="text-white font-bold text-center px-8 mb-8 laptop:mb-20 laptop:text-3xl laptop:w-[500px] ">
+            Tudo isso ao seu alcance por menos de R$5,30/dia.
+          </h3>
+
+          <div className="grid grid-col-1 tablet:grid-cols-2 gap-4 laptop:gap-24 macair:gap-52 ">
+            <CardMethodology
+              icon={mentoria}
+              text="Mentorias ao vivo quinzenais com tira dúvidas, temas atuais e relevantes."
+              title="Mentorias ao vivo"
+            />
+            <CardMethodology
+              icon={cursos}
+              text="17 cursos exclusivos com os melhores professores e totalmente inéditos no Brasil."
+              title="Cursos exclusivos"
+            />
+            <CardMethodology
+              icon={suporte}
+              text="Aulas em alta qualidade visual, resumos, exercícios, materiais de apoio e transcrições."
+              title="Apoio e Suporte"
+            />
+            <CardMethodology
+              icon={comunidade}
+              text="Faça networking, troque experiências e crie conexões valiosas."
+              title="Comunidade"
+            />
+            <CardMethodology
+              icon={metodologia}
+              text="Metodologia prática para aprender com desafios e projetos reais."
+              title="Metodologia Hands-on"
+            />
+            <CardMethodology
+              icon={mercado}
+              text="Você em contato direto com as maiores e melhores empresas do mercado."
+              title="Mercado de Trabalho"
+            />
+          </div>
+        </div>
+        <div className="flex flex-col items-center bg-white">
+          <button className="w-[280px] laptop:w-[403px] h-[55px] laptop:h-[92px] bg-primary-default hover:bg-primary-hover font-bold text-white laptop:text-xl text-sm rounded-md -mt-[32px] laptop:-mt-[52px]">
+            QUERO ME INSCREVER
+          </button>
+        </div>
+        <div className="bg-white flex flex-col items-center py-14 gap-10 ">
+          <h2 className="font-bold text-center text-xl w-[280px] laptop:w-[450px] laptop:text-3xl ">
+            Comprometimento Absoluto com seu Sucesso Profissional
+          </h2>
+          <div className="flex flex-col laptop:flex-row items-center gap-8 macair:w-[1110px] laptop:px-8">
+            <div className="flex justify-center items-center w-[300px] h-[400px]  laptop:w-full">
+              <Image src={selo} alt="" />
+            </div>
+            <div className="flex flex-col gap-8 w-[280px] tablet:w-[680px] laptop:w-full ">
+              <p className="text-justify font-bold">
+                Entendemos que sua confiança em nós exige mais do que palavras -
+                exige uma promessa inabalável.
+              </p>
+              <p className="text-justify">
+                Estamos 100% comprometidos com seu resultado e esperamos o mesmo
+                de você. Se você assistir todas as aulas e mentorias, participar
+                de todos exercícios - e se, mesmo assim, ao final de um ano,
+                sentir que não alcançou os resultados prometidos,
+                <strong>
+                  {" "}
+                  nós honraremos nosso compromisso com a mais completa garantia
+                  do mercado e devolvemos 100% do seu dinheiro.
+                </strong>
+              </p>
+              <p className="text-justify">
+                Por que oferecemos isso? Porque cada elemento do nosso programa
+                foi meticulosamente desenhado para colocá-lo na fronteira do
+                conhecimento em blockchain, Web3 e tecnologias emergentes. Nossa
+                confiança é total - na qualidade do nosso programa, na expertise
+                dos nossos mentores e, o mais importante, em você.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="bg-black flex flex-col items-center py-8 gap-8 laptop:gap-14">
+          <h3 className="text-white text-xl px-6 text-center laptop:text-3xl font-bold">Parceiros comerciais, Stacks e Redes</h3>
+          <p className="text-text-netraul text-justify px-8 laptop:w-[700px] laptop:text-center laptop:text-xl">
+            Conheça as principais empresas que confiam em nossa plataforma e as
+            principais redes e stacks que usamos.
+          </p>
+          <div className="flex flex-col gap-6 tablet:flex-row px-4 laptop:gap-8 ">
+            <Image src={openai} alt="" />
+            <Image src={ethereum} alt="" />
+            <Image src={polygon} alt="" />
+            <Image src={optism} alt="" />
+            <Image src={binance} alt="" />
+            <Image src={inovabra} alt="" />
+            <Image src={solana} alt="" />
+            <Image src={icp} alt="" />
+          </div>
+        </div>
+        <div>
+          <h3>Opções de assinaturas</h3>
+          <div>
+            
           </div>
         </div>
       </div>

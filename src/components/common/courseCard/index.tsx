@@ -11,8 +11,9 @@ nameTag: string;
   text2: string;
   imgAvatar: any[];
   namesProf?: string[];
-  penultimateNameProf: string;
-  lastNameProf: string;
+  penultimateNameProf?: string;
+  lastNameProf?: string;
+  onlyOneName?: boolean;
 }
 
 export const CourseCard = ({
@@ -24,6 +25,7 @@ nameTag,
   namesProf,
   penultimateNameProf,
   lastNameProf,
+  onlyOneName
 }: CourseCardProps) => {
   return (
     <div className="bg-gradient-to-b from-bgCourseCardFrom to-bgCourseCardTo bg-opacity-10 w-[full] mx-8 rounded-lg flex flex-col laptop:flex-row-reverse items-center justify-center px-4 py-8 laptop:py-12  gap-8 max-w-[1200px] shadow-lg shadow-purple-500 ">
@@ -52,7 +54,7 @@ nameTag,
               {" "}
               {penultimateNameProf}
             </span>
-            <span className="text-text-netraul text-[10px]"> e</span>
+            <span className="text-text-netraul text-[10px]" hidden={onlyOneName}> e</span>
             <span className="text-white text-[10px]"> {lastNameProf}</span>
           </div>
           </div>
