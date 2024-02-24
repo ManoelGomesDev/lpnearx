@@ -18,8 +18,8 @@ export const CardFAQ = ({ title, text }: Props) => {
   return (
     <div className="px-4 py-4 w-full bg-bgNetraul flex justify-between rounded-md">
       <div>
-        <p className="text-white text-sm">{title}</p>
-        <p className="text-text-netraul text-xs pt-2" hidden={toogleCard}>{text}</p>
+        <p className="text-white text-lg laptop:text-xl">{title}</p>
+        <p className="text-text-netraul text-sm pt-2 laptop:text-base" hidden={toogleCard}>{text}</p>
       </div>
       <div>
         <button onClick={handleToogleCard} hidden={!toogleCard}>
