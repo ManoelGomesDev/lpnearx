@@ -42,8 +42,8 @@ export const Footer = function () {
             <div className="flex   gap-8 py-10 tablet:py-0 ">
             <div className="flex flex-col items-start gap-4">
                 <p className="text-sm text-white">NOSSAS TRILHAS</p>
-                <p className="text-text-netraul text-sm"><a href="/plan#section-blockchain">Blockchain</a></p>
-                <p className="text-text-netraul text-sm"><a href="/plan#section-ia">Inteligência Artificial</a></p>
+                <p className="text-text-netraul text-sm"><a href="/#section-blockchain">Blockchain</a></p>
+                <p className="text-text-netraul text-sm"><a href="/#section-ia">Inteligência Artificial</a></p>
                 {/* <p className="text-text-netraul text-sm"><a href="/plan#ia">Web3</a></p>
                 <p className="text-text-netraul text-sm"><a href="/plan#ia">Desenvolvimento 3D e Games</a></p> */}
             </div>
