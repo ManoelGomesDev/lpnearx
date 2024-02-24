@@ -6,6 +6,9 @@ import { Tag } from "@/components/common/tag";
 import { Header } from "@/components/header";
 import Image from "next/image";
 
+import { PiToggleRightFill } from "react-icons/pi";
+import { MdOutlineToggleOff } from "react-icons/md";
+
 import reginaAvatar from "../../public/assets/reginaAvatar.png";
 import pedroAvatar from "../../public/assets/pedroAvatar.png";
 import lucasAvatar from "../../public/assets/lucasAvatar.png";
@@ -22,18 +25,23 @@ import metodologia from "../../public/assets/metodologia.png";
 import mercado from "../../public/assets/mercadoTrabalho.png";
 import selo from "../../public/assets/selo.png";
 
-import openai from "../../public/assets/openai.png"
-import ethereum from "../../public/assets/ethereum.png"
-import polygon from "../../public/assets/polygon.png"
-import optism from "../../public/assets/optism.png"
-import binance from "../../public/assets/binance.png"
-import inovabra from "../../public/assets/inovabra.png"
-import solana from "../../public/assets/solana.png"
-import icp from "../../public/assets/icp.png"
+import openai from "../../public/assets/openai.png";
+import ethereum from "../../public/assets/ethereum.png";
+import polygon from "../../public/assets/polygon.png";
+import optism from "../../public/assets/optism.png";
+import binance from "../../public/assets/binance.png";
+import inovabra from "../../public/assets/inovabra.png";
+import solana from "../../public/assets/solana.png";
+import icp from "../../public/assets/icp.png";
 
 import { CardMethodology } from "@/components/common/cardMethodology";
+import { CardFAQ } from "@/components/common/cardFAQ";
+import { FAQ } from "@/faq";
+import { ButtonWhatsap } from "@/components/common/buttonWhatsapp";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
+  const faq = FAQ
   return (
     <div className="bg-gradient-to-tr from-bgDark to-bgLight ">
       <Header />
@@ -267,7 +275,9 @@ export default function Home() {
           </div>
         </div>
         <div className="bg-black flex flex-col items-center py-8 gap-8 laptop:gap-14">
-          <h3 className="text-white text-xl px-6 text-center laptop:text-3xl font-bold">Parceiros comerciais, Stacks e Redes</h3>
+          <h3 className="text-white text-xl px-6 text-center laptop:text-3xl font-bold">
+            Parceiros comerciais, Stacks e Redes
+          </h3>
           <p className="text-text-netraul text-justify px-8 laptop:w-[700px] laptop:text-center laptop:text-xl">
             Conheça as principais empresas que confiam em nossa plataforma e as
             principais redes e stacks que usamos.
@@ -283,13 +293,137 @@ export default function Home() {
             <Image src={icp} alt="" />
           </div>
         </div>
-        <div>
-          <h3>Opções de assinaturas</h3>
-          <div>
-            
+        <div className="py-14 flex flex-col gap-8">
+          <h3 className="text-white text-center laptop:text-4xl font-bold">
+            Opções de assinaturas
+          </h3>
+          <div className="flex flex-col gap-8 items-center laptop:flex-row laptop:justify-center">
+            <div className="bg-gradient-to-b from-bgCourseCardFrom to-bgCourseCardTo bg-opacity-10 min-w-[280px]  mx-8 rounded-lg flex flex-col  items-center justify-center   gap-8 shadow-lg shadow-purple-500 tablet:min-w-[458px] max-w-[458px]">
+              <div className="bg-red-600 h-10 rounded-t-md w-full  flex justify-center items-center">
+                <span className="text-white font-bold">
+                  Último mês disponível
+                </span>
+              </div>
+
+              <div className="flex flex-col items-center gap-8 pb-8">
+                <div className="flex flex-col items-center">
+                  <h4 className="text-white font-bold text-xl laptop:text-3xl">Vitalício</h4>
+                  <p className="text-text-netraul">Acesso vitalício à:</p>
+                </div>
+                <div className="flex flex-col gap-4">
+                  <div className="flex items-center gap-2">
+                    <PiToggleRightFill color="#7331fe" size={30} />
+                    <span className="text-white">Cursos e certificações</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <PiToggleRightFill color="#7331fe" size={30} />
+                    <span className="text-white">Mentorias quinzenais</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <PiToggleRightFill color="#7331fe" size={30} />
+                    <span className="text-white">Atualizações e melhorias</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <PiToggleRightFill color="#7331fe" size={30} />
+                    <span className="text-white">Comunidade</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <PiToggleRightFill color="#7331fe" size={30} />
+                    <span className="text-white">Suporte</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <PiToggleRightFill color="#7331fe" size={30} />
+                    <span className="text-white">Call de consultoria (60min)</span>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center h-[100px]">
+                  <p className="text-text-netraul text-sm line-through">De: R$ 7.320,99</p>
+                  <small className="text-white text-xs">Por:</small>
+                  <div className="flex items-center text-white gap-1">
+                  <small>12x</small><span className="font-bold text-xl laptop:text-2xl">R$ 359,99</span>
+                  </div>
+                
+             
+                </div>
+                <div>
+                <button className="text-white font-bold bg-primary-default hover:bg-primary-hover rounded-md px-4 py-2 laptop:px-10 laptop:py-4">Assinar agora</button>
+                </div>
+              </div>
+            </div>
+            <div className=" bg-gradient-to-b from-bgCourseCardFrom to-bgCourseCardTo bg-opacity-10  mx-8 min-w-[280px] rounded-lg flex flex-col  items-center justify-center   gap-8 shadow-lg shadow-purple-500 tablet:min-w-[458px] max-w-[458px]">
+              <div className="bg-primary-default h-10 rounded-t-lg w-full flex justify-center items-center">
+                <span className="text-white font-bold">
+                  Plano mais popular
+                </span>
+              </div>
+
+              <div className="flex flex-col items-center gap-8 pb-8">
+                <div className="flex flex-col items-center">
+                  <h4 className="text-white font-bold text-xl laptop:text-3xl">Premium</h4>
+                  <p className="text-text-netraul">Acesso anual à:</p>
+                </div>
+                <div className="flex flex-col gap-4">
+                  <div className="flex items-center gap-2">
+                  <PiToggleRightFill color="#7331fe" size={30} />
+                    <span className="text-white">Cursos e certificações</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <PiToggleRightFill color="#7331fe" size={30} />
+                    <span className="text-white">Mentorias quinzenais</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <PiToggleRightFill color="#7331fe" size={30} />
+                    <span className="text-white">Atualizações e melhorias</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <PiToggleRightFill color="#7331fe" size={30} />
+                    <span className="text-white">Comunidade</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <PiToggleRightFill color="#7331fe" size={30} />
+                    <span className="text-white">Suporte</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                  <MdOutlineToggleOff color="#7331fe" size={30}  />
+                    <span className="text-white line-through">Call de consultoria (60min)</span>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center h-[100px]">
+                  <p className="text-text-netraul text-sm line-through">De: R$ 3.865,99</p>
+                  <small className="text-white text-xs">Por:</small>
+                  <div className="flex flex-col items-center text-white gap-1">
+                 <p className="font-bold text-xl laptop:text-2xl">R$ 159,99</p>
+                 <small className="text-text-netraul">no plano anual</small>
+                  </div>
+                
+             
+                </div>
+                <div>
+                <button className="text-white font-bold bg-primary-default hover:bg-primary-hover rounded-md px-4 py-2 laptop:px-10 laptop:py-4">Assinar agora</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <div className="flex flex-col items-center py-14 gap-12" id="faq">
+          <h3 className="text-white text-xl laptop:text-6xl font-bold">FAQ</h3>
+        <div className="flex flex-col  w-full gap-4 max-w-[1110px] px-10" >
+            {faq.map(({ id, question, answer }) => (
+              <CardFAQ key={id} title={question} text={answer} />
+            ))}
+          </div>
+        </div>
+        <div className="py-10 flex flex-col items-center gap-8 px-8">
+            <p className="text-text-netraul text-xl">Ficou alguma dúvida?</p>
+            <ButtonWhatsap />
+          </div>
       </div>
+      <div className="py-10"> 
+      <Footer />
+      </div>
+      <div className="flex flex-col items-center w-full ">
+                <p className="text-text-netraul border-t-[0.03rem] border-gray-600 w-[90%] text-xs text-center py-4" >NearX 2023 © Todos os direitos reservados</p>
+            </div>
     </div>
   );
 }
