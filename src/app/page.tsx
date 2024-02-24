@@ -63,7 +63,7 @@ export default function Home() {
         <div>
           <div className="bg-white flex flex-col items-center justify-center gap-8 py-10 ">
             <ButtonCTATop btnName="QUERO ME INSCREVER" />
-            <h2 className="text-black font-bold text-center w-[300px] text-base tablet:text-xl tablet:w-[400px] laptop:text-2xl laptop:w-[450px] macair:text-3xl macair:w-[550px] desktop:text-4xl desktop:w-[600px] macair:mt-12 mt-8">
+            <h2 className="text-black font-bold text-center w-[300px] text-lg tablet:text-xl tablet:w-[400px] laptop:text-2xl laptop:w-[450px] macair:text-3xl macair:w-[550px] desktop:text-4xl desktop:w-[600px] macair:mt-12 mt-8">
               O único lugar capaz de levar a sua carreira para o próximo nível.
             </h2>
             <p className="text-black text-xs text-center laptop:w-[480px] laptop:text-base macair:w-[550px] tablet:w-[350px] tablet:text-sm mobileL:w-[320px] w-[280px]">
@@ -196,9 +196,9 @@ export default function Home() {
         </div>
         <div
           id="methods"
-          className="bg-black flex flex-col items-center  py-14 laptop:py-24"
+          className="bg-black flex flex-col items-center  py-16 laptop:py-24"
         >
-          <h3 className="text-white font-bold text-center px-8 mb-8 laptop:mb-20 laptop:text-3xl laptop:w-[500px] ">
+          <h3 className="text-white text-xl font-bold text-center px-8 mb-8 laptop:mb-20 laptop:text-3xl laptop:w-[500px] ">
             Tudo isso ao seu alcance por menos de R$5,30/dia.
           </h3>
 
@@ -241,7 +241,7 @@ export default function Home() {
           </button>
         </div>
         <div className="bg-white flex flex-col items-center py-14 gap-10 ">
-          <h2 className="font-bold text-center text-xl w-[280px] laptop:w-[450px] laptop:text-3xl ">
+          <h2 className="font-bold text-center  w-[280px] laptop:w-[450px] laptop:text-3xl text-2xl ">
             Comprometimento Absoluto com seu Sucesso Profissional
           </h2>
           <div className="flex flex-col laptop:flex-row items-center gap-8 macair:w-[1110px] laptop:px-8">
@@ -275,7 +275,7 @@ export default function Home() {
           </div>
         </div>
         <div className="bg-black flex flex-col items-center py-8 gap-8 laptop:gap-14">
-          <h3 className="text-white text-xl px-6 text-center laptop:text-3xl font-bold">
+          <h3 className="text-white text-2xl px-6 text-center laptop:text-3xl font-bold">
             Parceiros comerciais, Stacks e Redes
           </h3>
           <p className="text-text-netraul text-justify px-8 laptop:w-[700px] laptop:text-center laptop:text-xl">
@@ -294,7 +294,7 @@ export default function Home() {
           </div>
         </div>
         <div className="py-14 flex flex-col gap-8">
-          <h3 className="text-white text-center laptop:text-4xl font-bold">
+          <h3 className="text-white text-2xl text-center laptop:text-4xl font-bold">
             Opções de assinaturas
           </h3>
           <div className="flex flex-col gap-8 items-center laptop:flex-row laptop:justify-center">
@@ -406,7 +406,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col items-center py-14 gap-12" id="faq">
-          <h3 className="text-white text-xl laptop:text-6xl font-bold">FAQ</h3>
+          <h3 className="text-white text-2xl laptop:text-6xl font-bold">FAQ</h3>
         <div className="flex flex-col  w-full gap-4 max-w-[1110px] px-10" >
             {faq.map(({ id, question, answer }) => (
               <CardFAQ key={id} title={question} text={answer} />

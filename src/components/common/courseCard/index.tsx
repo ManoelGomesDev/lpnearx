@@ -29,7 +29,7 @@ nameTag,
 }: CourseCardProps) => {
   return (
     <div className="bg-gradient-to-b from-bgCourseCardFrom to-bgCourseCardTo bg-opacity-10 w-[full] mx-8 rounded-lg flex flex-col laptop:flex-row-reverse items-center justify-center px-4 py-8 laptop:py-12  gap-8 max-w-[1200px] shadow-lg shadow-purple-500 ">
-      <div className="flex flex-col  gap-4 laptop:gap-8 laptop:w-[50%] ">
+      <div className="flex flex-col items-center laptop:items-start gap-4 laptop:gap-8 laptop:w-[50%] ">
         <Tag text={nameTag} />
         <h2 className="text-white font-bold text-xl">{title}</h2>
         <p className="text-text-netraul text-sm laptop:w-[70%]">{text1}</p>
