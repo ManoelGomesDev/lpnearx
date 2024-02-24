@@ -46,7 +46,7 @@ export default function Home() {
     <div className="bg-gradient-to-tr from-bgDark to-bgLight ">
       <Header />
       <div
-        className="flex justify-center items-center h-screen -mt-[100px] "
+        className="flex justify-center items-start h-screen  "
         id="section-video"
       >
         <iframe
