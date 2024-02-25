@@ -3,3 +3,23 @@
 @tailwind utilities;
 
 
+
+
+.swiper-slide {
+    position: relative;
+    width: 330px;
+    height: 300px;
+   
+    border-radius: 14px;
+    border: 1px solid rgba(177, 177, 177, 0.4);
+}
+
+.swiper-slide-image {
+    display: block;
+    width: 100%;
+  
+    object-fit: cover;
+    border-radius: inherit;
+    user-select: none;
+}
+

@@ -43,7 +43,7 @@ import { Footer } from "@/components/footer";
 export default function Home() {
   const faq = FAQ
   return (
-    <div className="bg-gradient-to-tr from-bgDark to-bgLight ">
+    <div className="bg-gradient-to-tr from-bgDark to-bgLight min-w-[337px] ">
       <Header />
       <div
         className="flex justify-center items-start h-screen  "
@@ -61,7 +61,7 @@ export default function Home() {
       </div>
       <div id="section-page" className="">
         <div>
-          <div className="bg-white flex flex-col items-center justify-center gap-8 py-10 ">
+          <div className="bg-white flex flex-col items-center justify-center gap-2 py-10 ">
             <ButtonCTATop btnName="QUERO ME INSCREVER" />
             <h2 className="text-black font-bold text-center w-[300px] text-lg tablet:text-xl tablet:w-[400px] laptop:text-2xl laptop:w-[450px] macair:text-3xl macair:w-[550px] desktop:text-4xl desktop:w-[600px] macair:mt-12 mt-8">
               O único lugar capaz de levar a sua carreira para o próximo nível.
@@ -97,7 +97,7 @@ export default function Home() {
               />
               <ButtonCTA btnName="Assinar agora" />
             </div>
-            <div className="flex flex-col laptop:gap-14 gap-8">
+            <div className="flex flex-col items-center laptop:gap-14 gap-8">
               <CourseCard
                 nameTag="Curso 1"
                 title="Tokenização"
@@ -163,7 +163,7 @@ export default function Home() {
               />
               <ButtonCTA btnName="Assinar agora" />
             </div>
-            <div className="flex flex-col laptop:gap-14 gap-8">
+            <div className="flex flex-col items-center  laptop:gap-14 gap-8">
               <CourseCard
                 nameTag="Curso 1"
                 title="Aplicativos em IA"
@@ -340,13 +340,13 @@ export default function Home() {
                   <p className="text-text-netraul text-sm line-through">De: R$ 7.320,99</p>
                   <small className="text-white text-xs">Por:</small>
                   <div className="flex items-center text-white gap-1">
-                  <small>12x</small><span className="font-bold text-xl laptop:text-2xl">R$ 359,99</span>
+                  <small>12x</small><span className="font-bold text-4xl laptop:text-5xl">R$ 359,99</span>
                   </div>
                 
              
                 </div>
                 <div>
-                <button className="text-white font-bold bg-primary-default hover:bg-primary-hover rounded-md px-4 py-2 laptop:px-10 laptop:py-4">Assinar agora</button>
+                <button className="text-white font-bold bg-primary-default hover:bg-primary-hover rounded-md px-6 py-3 laptop:px-10 laptop:py-4">Assinar agora</button>
                 </div>
               </div>
             </div>
@@ -392,14 +392,14 @@ export default function Home() {
                   <p className="text-text-netraul text-sm line-through">De: R$ 3.865,99</p>
                   <small className="text-white text-xs">Por:</small>
                   <div className="flex flex-col items-center text-white gap-1">
-                 <p className="font-bold text-xl laptop:text-2xl">R$ 159,99</p>
+                 <p className="font-bold text-4xl laptop:text-5xl">R$ 159,99</p>
                  <small className="text-text-netraul">no plano anual</small>
                   </div>
                 
              
                 </div>
                 <div>
-                <button className="text-white font-bold bg-primary-default hover:bg-primary-hover rounded-md px-4 py-2 laptop:px-10 laptop:py-4">Assinar agora</button>
+                <button className="text-white font-bold bg-primary-default hover:bg-primary-hover rounded-md px-6 py-3 laptop:px-10 laptop:py-4">Assinar agora</button>
                 </div>
               </div>
             </div>
