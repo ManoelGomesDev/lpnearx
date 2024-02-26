@@ -76,7 +76,7 @@ nameTag,
       </div>
       <div className="opacity-100 w-[50%] flex justify-center items-center">
         <Carrosseul cardsImage={cards} />
-        {/* <Image src={carrseul} alt="" /> */}
+      
       </div>
     </div>
   );
