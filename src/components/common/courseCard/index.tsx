@@ -44,7 +44,7 @@ nameTag,
         <h2 className="text-white font-bold text-xl">{title}</h2>
         <p className="text-text-netraul text-sm laptop:w-[70%]">{text1}</p>
         <p className="text-text-netraul text-sm laptop:w-[70%]">{text2}</p>
-        <div className="flex flex-col gap-4  tablet:flex-row tablet:justify-between tablet:items-center ">
+        <div className="flex flex-col gap-4  tablet:flex-row tablet:justify-between tablet:items-center w-full ">
             <div className="flex flex-col items-center tablet:items-start w-full">
           <div className="flex">
             {imgAvatar.map((avatar) => (
