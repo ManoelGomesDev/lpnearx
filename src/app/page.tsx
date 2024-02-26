@@ -65,8 +65,8 @@ export default function Home() {
 
     if (event.origin !== "https://player-vz-350c0f87-16f.tv.pandavideo.com.br") return;
     if (event.type != 'message') return
-
-    if ("224758e4-4a95-4622-ab07-153ef8583e62" != event.data?.video) return
+   
+    if ("9ea90f5c-f12b-4a91-a1f3-f615440229d9" != event.data?.video) return
     if (finish) return
 
     if (event.data?.message == "panda_ended") {
@@ -105,7 +105,7 @@ export default function Home() {
       >
         <iframe
           id="panda-224758e4-4a95-4622-ab07-153ef8583e62"
-          src="https://player-vz-350c0f87-16f.tv.pandavideo.com.br/embed/?v=224758e4-4a95-4622-ab07-153ef8583e62"
+          src="https://player-vz-350c0f87-16f.tv.pandavideo.com.br/embed/?v=9ea90f5c-f12b-4a91-a1f3-f615440229d9"
           style={{ border: "none" }}
           allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
           allowFullScreen={true}
