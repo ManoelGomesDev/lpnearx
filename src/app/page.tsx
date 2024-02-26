@@ -17,6 +17,21 @@ import alexandreAvatar from "../../public/assets/alexandreAvatar.png";
 import caioAvatar from "../../public/assets/caioAvatar.png";
 import vitorAvatar from "../../public/assets/vitorAvatar.png";
 
+import card1 from "../../public/assets/cards/criacaodex.png"
+import card2 from "../../public/assets/cards/desenvolvimentodrex.png"
+import card3 from "../../public/assets/cards/desenvolvimentoweb3.png"
+import card4 from "../../public/assets/cards/dominandoarbitrum.png"
+import card5 from "../../public/assets/cards/empregabilidade.png"
+import card6 from "../../public/assets/cards/hyperledge.png"
+import card7 from "../../public/assets/cards/iabuble.png"
+import card8 from "../../public/assets/cards/iaparaempreendedores.png"
+import card9 from "../../public/assets/cards/introducaosmartcontracts.png"
+import card10 from "../../public/assets/cards/python.png"
+import card11 from "../../public/assets/cards/rust101.png"
+import card12 from "../../public/assets/cards/rwa.png"
+import card13 from "../../public/assets/cards/tokenizacaoimboliaria.png"
+import card14 from "../../public/assets/cards/vunerabilidadesnartcontracts.png"
+
 import mentoria from "../../public/assets/mentoria.png";
 import cursos from "../../public/assets/cursos.png";
 import suporte from "../../public/assets/suporte.png";
@@ -106,6 +121,7 @@ export default function Home() {
                 imgAvatar={[reginaAvatar, pedroAvatar]}
                 penultimateNameProf="Regina Pedroso"
                 lastNameProf="Pedro Magalhões"
+                cards={[card12, card13]}
               />
               <CourseCard
                 nameTag="Curso 2"
@@ -116,6 +132,7 @@ export default function Home() {
                 namesProf={["Lucas Oliveira"]}
                 penultimateNameProf="Afonso Dalvi"
                 lastNameProf="Pedro Magalhões"
+                cards={[card9, card14, card5]}
               />
               <CourseCard
                 nameTag="Curso 3"
@@ -125,6 +142,7 @@ export default function Home() {
                 imgAvatar={[pedroAvatar, caioAvatar]}
                 penultimateNameProf="Pedro Magalhões"
                 lastNameProf="Caio Mattos"
+                cards={[card1, card4, card3]}
               />
               <CourseCard
                 nameTag="Curso 4"
@@ -134,6 +152,7 @@ export default function Home() {
                 imgAvatar={[lucasAvatar, pedroAvatar]}
                 penultimateNameProf="Lucas Oliveira"
                 lastNameProf="Pedro Magalhões"
+                cards={[card2, card6]}
               />
             </div>
           </div>
@@ -172,6 +191,7 @@ export default function Home() {
                 imgAvatar={[vitorAvatar]}
                 penultimateNameProf="Vitor Romão"
                 onlyOneName
+                cards={[card7]}
               />
               <CourseCard
                 nameTag="Curso 2"
@@ -181,6 +201,7 @@ export default function Home() {
                 imgAvatar={[alexandreAvatar]}
                 penultimateNameProf="Alexandre Messina"
                 onlyOneName
+                cards={[card8]}
               />
               <CourseCard
                 nameTag="Curso 3"
@@ -190,6 +211,7 @@ export default function Home() {
                 imgAvatar={[lucasAvatar]}
                 penultimateNameProf="Lucas Oliveira"
                 onlyOneName
+                cards={[card10]}
               />
             </div>
           </div>

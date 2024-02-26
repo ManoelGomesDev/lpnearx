@@ -22,7 +22,7 @@ export const Carrosseul = ({ cardsImage }: CarrosseulProps) => {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        initialSlide={7}
+        initialSlide={cardsImage.length > 2 ? (cardsImage.length / 2): 0}
        
         coverflowEffect={{
           rotate: 0,
