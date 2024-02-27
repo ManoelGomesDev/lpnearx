@@ -14,5 +14,5 @@ COPY package.json next.config.js .env* ./
 COPY --from=build-stage /app/public ./public
 COPY --from=build-stage /app/.next ./.next
 COPY --from=build-stage /app/node_modules ./node_modules
-EXPOSE 3001
+EXPOSE 3002
 CMD ["node_modules/.bin/next", "start", "-p", "3002"]
