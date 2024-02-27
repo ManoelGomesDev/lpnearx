@@ -29,5 +29,5 @@ jobs:
           cd /etc/nearx
           cat .docker-pass/manoel | sudo docker login ghcr.io --username manoelgomesdev --password-stdin
           cd compose
-          sudo docker compose pull lpnearx
-          sudo docker compose up -d lpnearx
+          sudo docker compose pull lp-nearx
+          sudo docker compose up -d lp-nearx
