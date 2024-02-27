@@ -23,6 +23,7 @@ import { FAQ } from "@/faq";
 import { ButtonWhatsap } from "@/components/common/buttonWhatsapp";
 import { Footer } from "@/components/footer";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [finish, setFinish] = useState(false)
@@ -266,9 +267,9 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col items-center bg-white">
-              <button className="w-[280px] laptop:w-[403px] h-[55px] laptop:h-[92px] bg-primary-default hover:bg-primary-hover font-bold text-white laptop:text-xl text-sm rounded-md -mt-[32px] laptop:-mt-[52px]">
+              <Link href={"/#plan"} className="flex justify-center items-center w-[280px] laptop:w-[403px] h-[55px] laptop:h-[92px] bg-primary-default hover:bg-primary-hover font-bold text-white laptop:text-xl text-sm rounded-md -mt-[32px] laptop:-mt-[52px]">
                 QUERO ME INSCREVER
-              </button>
+              </Link>
             </div>
             <div className="bg-white flex flex-col items-center py-14 gap-10 ">
               <h2 className="font-bold text-center  w-[280px] laptop:w-[450px] laptop:text-3xl text-2xl ">
@@ -323,7 +324,7 @@ export default function Home() {
                 <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/icp.png" alt="" width={105} height={28} />
               </div>
             </div>
-            <div className="py-14 flex flex-col gap-8">
+            <div className="py-14 flex flex-col gap-8" id="plan">
               <h3 className="text-white text-2xl text-center laptop:text-4xl font-bold">
                 Opções de assinaturas
               </h3>
