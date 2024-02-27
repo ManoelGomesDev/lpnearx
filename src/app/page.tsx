@@ -10,45 +10,12 @@ import Image from "next/image";
 import { PiToggleRightFill } from "react-icons/pi";
 import { MdOutlineToggleOff } from "react-icons/md";
 
-import reginaAvatar from "../../public/assets/reginaAvatar.png";
-import pedroAvatar from "../../public/assets/pedroAvatar.png";
-import lucasAvatar from "../../public/assets/lucasAvatar.png";
-import afonsoAvatar from "../../public/assets/afonsoAvatar.png";
-import alexandreAvatar from "../../public/assets/alexandreAvatar.png";
-import caioAvatar from "../../public/assets/caioAvatar.png";
-import vitorAvatar from "../../public/assets/vitorAvatar.png";
 
-import card1 from "../../public/assets/cards/criacaodex.png"
-import card2 from "../../public/assets/cards/desenvolvimentodrex.png"
-import card3 from "../../public/assets/cards/desenvolvimentoweb3.png"
-import card4 from "../../public/assets/cards/dominandoarbitrum.png"
-import card5 from "../../public/assets/cards/empregabilidade.png"
-import card6 from "../../public/assets/cards/hyperledge.png"
-import card7 from "../../public/assets/cards/iabuble.png"
-import card8 from "../../public/assets/cards/iaparaempreendedores.png"
-import card9 from "../../public/assets/cards/introducaosmartcontracts.png"
-import card10 from "../../public/assets/cards/python.png"
-import card11 from "../../public/assets/cards/rust101.png"
-import card12 from "../../public/assets/cards/rwa.png"
-import card13 from "../../public/assets/cards/tokenizacaoimboliaria.png"
-import card14 from "../../public/assets/cards/vunerabilidadesnartcontracts.png"
 
-import mentoria from "../../public/assets/mentoria.png";
-import cursos from "../../public/assets/cursos.png";
-import suporte from "../../public/assets/suporte.png";
-import comunidade from "../../public/assets/comunidade.png";
-import metodologia from "../../public/assets/metodologia.png";
-import mercado from "../../public/assets/mercadoTrabalho.png";
-import selo from "../../public/assets/selo.png";
 
-import openai from "../../public/assets/openai.png";
-import ethereum from "../../public/assets/ethereum.png";
-import polygon from "../../public/assets/polygon.png";
-import optism from "../../public/assets/optism.png";
-import binance from "../../public/assets/binance.png";
-import inovabra from "../../public/assets/inovabra.png";
-import solana from "../../public/assets/solana.png";
-import icp from "../../public/assets/icp.png";
+
+
+
 
 import { CardMethodology } from "@/components/common/cardMethodology";
 import { CardFAQ } from "@/components/common/cardFAQ";
@@ -159,41 +126,41 @@ export default function Home() {
                     title="Tokenização"
                     text1="Descubra o poder da tokenização imobiliária e do desenvolvimento de ativos reais com nossos cursos pioneiros no Brasil."
                     text2="Aprenda a transformar propriedades em ativos digitais negociáveis e a criar ativos reais utilizando a tecnologia blockchain. Saia pronto para aplicar a tokenização em projetos reais, com habilidades que colocam você à frente."
-                    imgAvatar={[reginaAvatar, pedroAvatar]}
+                    imgAvatar={["reginaAvatar", "pedroAvatar"]}
                     penultimateNameProf="Regina Pedroso"
                     lastNameProf="Pedro Magalhões"
-                    cards={[card12, card13]}
+                    cards={['rwa', 'tokenizacaoimboliaria']}
                   />
                   <CourseCard
                     nameTag="Curso 2"
                     title="Smart Contracts"
                     text1="Imagine um mundo onde cada transação, cada acordo, é seguro, transparente e automatizado. Bem-vindo ao universo dos Smart Contracts. "
                     text2="Com os maiores nomes do mercado, você vai aprender na prática a criar contratos inteligentes que estão transformando o mundo dos negócios. Tá aí uma habilidade para um linkedin lotado de propostas."
-                    imgAvatar={[lucasAvatar, afonsoAvatar, pedroAvatar]}
+                    imgAvatar={["lucasAvatar", "afonsoAvatar", "pedroAvatar"]}
                     namesProf={["Lucas Oliveira"]}
                     penultimateNameProf="Afonso Dalvi"
                     lastNameProf="Pedro Magalhões"
-                    cards={[card9, card14, card5]}
+                    cards={['introducaosmartcontracts', 'vunerabilidadesnartcontracts', 'rust101']}
                   />
                   <CourseCard
                     nameTag="Curso 3"
                     title="Apps Descentralizados (Dapps)"
                     text1="Imagine um mundo onde cada transação, cada acordo, é seguro, transparente e automatizado. Bem-vindo ao universo dos Smart Contracts.  "
                     text2="Com o especialista Afonso Dalvi, você vai aprender na prática com Solidity a criar contratos inteligentes que estão transformando o mundo dos negócios. Tá aí uma habilidade para um linkedin lotado de propostas."
-                    imgAvatar={[pedroAvatar, caioAvatar]}
+                    imgAvatar={["pedroAvatar", "caioAvatar"]}
                     penultimateNameProf="Pedro Magalhões"
                     lastNameProf="Caio Mattos"
-                    cards={[card1, card4, card3]}
+                    cards={['criacaodex', 'dominandoarbitrum', 'desenvolvimentoweb3']}
                   />
                   <CourseCard
                     nameTag="Curso 4"
                     title="DREX (Real digital do Brasil)"
                     text1="A tecnologia que está redefinindo o dinheiro digital no Brasil. Este curso não é apenas uma oportunidade de aprendizado; é um investimento em sua carreira em uma economia que está prestes a explodir. "
                     text2="Domine as técnicas e ferramentas que definem a tecnologia DREX, desde a teoria por trás da moeda digital até sua aplicação prática."
-                    imgAvatar={[lucasAvatar, pedroAvatar]}
+                    imgAvatar={["lucasAvatar", "pedroAvatar"]}
                     penultimateNameProf="Lucas Oliveira"
                     lastNameProf="Pedro Magalhões"
-                    cards={[card2, card6]}
+                    cards={["desenvolvimentodrex", "hyperledge"]}
                   />
                 </div>
               </div>
@@ -229,30 +196,30 @@ export default function Home() {
                     title="Aplicativos em IA"
                     text1="Neste curso, você irá aprender a construir um aplicativo inovador que simplifica e transforma a interação com documentos."
                     text2="O melhor de tudo? Você fará isso usando soluções no-code, uma abordagem que elimina as barreiras técnicas, permitindo que qualquer pessoa, independentemente de sua experiência em programação."
-                    imgAvatar={[vitorAvatar]}
+                    imgAvatar={["vitorAvatar"]}
                     penultimateNameProf="Vitor Romão"
                     onlyOneName
-                    cards={[card7]}
+                    cards={["iabuble"]}
                   />
                   <CourseCard
                     nameTag="Curso 2"
                     title="IA para empreendedores"
                     text1="Seja pioneiro na integração da IA no coração do seu negócio. Aprenda como a Inteligência Artificial pode ser o diferencial competitivo que todo empreendedor busca. "
                     text2="Aprimore suas operações, inove em seus produtos e acelere o crescimento com as soluções que a IA proporciona."
-                    imgAvatar={[alexandreAvatar]}
+                    imgAvatar={["alexandreAvatar"]}
                     penultimateNameProf="Alexandre Messina"
                     onlyOneName
-                    cards={[card8]}
+                    cards={["iaparaempreendedores"]}
                   />
                   <CourseCard
                     nameTag="Curso 3"
                     title="Programação em Python"
                     text1="Este curso é uma jornada prática para iniciantes e entusiastas, proporcionando uma introdução sólida à programação em Python. "
                     text2="Desde os fundamentos até conceitos mais avançados, os participantes irão explorar tópicos fundamentais para quem deseja desenvolver projetos em Python e trabalhar posteriormente com Inteligência Artificial (IA)"
-                    imgAvatar={[lucasAvatar]}
+                    imgAvatar={["lucasAvatar"]}
                     penultimateNameProf="Lucas Oliveira"
                     onlyOneName
-                    cards={[card10]}
+                    cards={["python"]}
                   />
                 </div>
               </div>
@@ -267,32 +234,32 @@ export default function Home() {
 
               <div className="grid grid-col-1 tablet:grid-cols-2 gap-4 laptop:gap-24 macair:gap-52 ">
                 <CardMethodology
-                  icon={mentoria}
+                  icon={"mentoria"}
                   text="Mentorias ao vivo quinzenais com tira dúvidas, temas atuais e relevantes."
                   title="Mentorias ao vivo"
                 />
                 <CardMethodology
-                  icon={cursos}
+                  icon={"cursos"}
                   text="17 cursos exclusivos com os melhores professores e totalmente inéditos no Brasil."
                   title="Cursos exclusivos"
                 />
                 <CardMethodology
-                  icon={suporte}
+                  icon={"suporte"}
                   text="Aulas em alta qualidade visual, resumos, exercícios, materiais de apoio e transcrições."
                   title="Apoio e Suporte"
                 />
                 <CardMethodology
-                  icon={comunidade}
+                  icon={"comunidade"}
                   text="Faça networking, troque experiências e crie conexões valiosas."
                   title="Comunidade"
                 />
                 <CardMethodology
-                  icon={metodologia}
+                  icon={"metodologia"}
                   text="Metodologia prática para aprender com desafios e projetos reais."
                   title="Metodologia Hands-on"
                 />
                 <CardMethodology
-                  icon={mercado}
+                  icon={"mercadoTrabalho"}
                   text="Você em contato direto com as maiores e melhores empresas do mercado."
                   title="Mercado de Trabalho"
                 />
@@ -309,7 +276,7 @@ export default function Home() {
               </h2>
               <div className="flex flex-col laptop:flex-row items-center gap-8 macair:w-[1110px] laptop:px-8">
                 <div className="flex justify-center items-center w-[300px] h-[400px]  laptop:w-full">
-                  <Image src={selo} alt="" />
+                  <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/selo.png" alt="" width={300} height={400} />
                 </div>
                 <div className="flex flex-col gap-8 w-[280px] tablet:w-[680px] laptop:w-full ">
                   <p className="text-justify font-bold">
@@ -345,15 +312,15 @@ export default function Home() {
                 Conheça as principais empresas que confiam em nossa plataforma e as
                 principais redes e stacks que usamos.
               </p>
-              <div className="flex flex-col gap-6 tablet:flex-row px-4 laptop:gap-8 ">
-                <Image src={openai} alt="" />
-                <Image src={ethereum} alt="" />
-                <Image src={polygon} alt="" />
-                <Image src={optism} alt="" />
-                <Image src={binance} alt="" />
-                <Image src={inovabra} alt="" />
-                <Image src={solana} alt="" />
-                <Image src={icp} alt="" />
+              <div className="flex flex-col gap-6 macair:flex macair:flex-row tablet:grid tablet:grid-cols-4 px-4 laptop:gap-8  ">
+                <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/openai.png" alt="" width={105} height={28} />
+                <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/ethereum.png" alt="" width={105} height={28}/>
+                <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/polygon.png" alt="" width={105} height={28} />
+                <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/optism.png" alt="" width={105} height={28} />
+                <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/binance.png" alt="" width={105} height={28} />
+                <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/inovabra.png" alt="" width={105} height={28} />
+                <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/solana.png" alt="" width={105} height={28} />
+                <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/icp.png" alt="" width={105} height={28} />
               </div>
             </div>
             <div className="py-14 flex flex-col gap-8">

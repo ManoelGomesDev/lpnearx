@@ -1,10 +1,10 @@
 import Image from "next/image"
-import logoImg from "../../../public/assets/logo.png"
+
 
 export const Header = () => {
 return (
     <header className="flex justify-center ">
-        <Image src={logoImg} alt="" width={239} height={56} />
+        <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/logo.png" alt="" width={239} height={56} />
       
     </header>
 )

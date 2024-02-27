@@ -18,7 +18,7 @@ nameTag: string;
   penultimateNameProf?: string;
   lastNameProf?: string;
   onlyOneName?: boolean;
-  cards:any[];
+  cards: string[];
 }
 
 export const CourseCard = ({
@@ -48,7 +48,7 @@ nameTag,
             <div className="flex flex-col items-center tablet:items-start w-full">
           <div className="flex">
             {imgAvatar.map((avatar) => (
-              <Image src={avatar} alt="" />
+              <Image src={`https://nearxschool.s3.us-east-2.amazonaws.com/lp/${avatar}.png`} alt="" width={50} height={50} />
             ))}
           </div>
 

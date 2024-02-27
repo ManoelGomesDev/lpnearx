@@ -2,7 +2,7 @@ import Image from "next/image";
 
 
 interface CardMethodologyProps {
-    icon: any;
+    icon: string;
     title: string;
     text: string;
 }
@@ -11,7 +11,7 @@ export const CardMethodology = ({icon, title, text}: CardMethodologyProps) => {
     return (
         <div className="flex flex-col items-center justify-between gap-4">
             <div className="flex justify-center items-center">
-            <Image src={icon} alt="" height={58} width={54} />
+            <Image src={`https://nearxschool.s3.us-east-2.amazonaws.com/lp/${icon}.png`} alt="" height={58} width={54} />
             </div>
            <div className="flex flex-col items-center justify-center  h-full gap-2">
             <div className="flex justify-center items-center ">

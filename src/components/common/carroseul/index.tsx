@@ -1,3 +1,4 @@
+'use client'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -11,6 +12,8 @@ interface CarrosseulProps {
 }
 
 export const Carrosseul = ({ cardsImage }: CarrosseulProps) => {
+
+  const url = "https://nearxschool.s3.us-east-2.amazonaws.com/cards/vunerabilidadesnartcontracts.png"
     
   return (
     <div className="tablet:w-[500px] w-[300px] ">
@@ -38,10 +41,11 @@ export const Carrosseul = ({ cardsImage }: CarrosseulProps) => {
         
         className="w-[270px] tablet:w-full laptop:w-[80%] macair:w-full "
       >
+        
     
           {cardsImage.map((card) => (
             <SwiperSlide className="swiper-slide">
-              <Image src={card} alt="" className="swiper-slide-image" />
+              <Image src={`https://nearxschool.s3.us-east-2.amazonaws.com/lp/${card}.png`} alt="" width={300} height={200} className="swiper-slide-image" />
             </SwiperSlide>
           ))}
     
