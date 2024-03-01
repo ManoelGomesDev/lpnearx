@@ -425,7 +425,7 @@ export default function Home() {
                       <small className="text-white text-xs">Por:</small>
                       <div className="flex flex-col items-center text-white gap-1">
                         <p className="font-bold text-4xl laptop:text-5xl">R$ 159,99</p>
-                        <small className="text-text-netraul">no plano anual</small>
+                        <small className="text-text-netraul">mensais no plano anual</small>
                       </div>
 
 
