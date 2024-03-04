@@ -31,7 +31,13 @@ export default function Home() {
       return;
     if (event.type != "message") return;
 
-    if ("9ea90f5c-f12b-4a91-a1f3-f615440229d9" != event.data?.video) return;
+    if (
+      event.data?.video !== "4466bf93-803d-4bcb-8656-285a811eb697" &&
+      event.data?.video !== "9ea90f5c-f12b-4a91-a1f3-f615440229d9"
+    ) {
+      return;
+    }
+  
     if (finish) return;
 
     if (event.data?.message == "panda_ended") {
@@ -72,12 +78,13 @@ export default function Home() {
         height="100%"
          className="rounded-md laptop:max-w-[1080px] max-h-[720px] tablet:hidden "
           data-fetchpriority="high"
+       
         ></iframe>
 
 
 
           <iframe
-          id="panda-224758e4-4a95-4622-ab07-153ef8583e62"
+          id="panda-9ea90f5c-f12b-4a91-a1f3-f615440229d9"
           src="https://player-vz-350c0f87-16f.tv.pandavideo.com.br/embed/?v=9ea90f5c-f12b-4a91-a1f3-f615440229d9"
           style={{ border: "none" }}
           allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
