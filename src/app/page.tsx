@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { ButtonCTA } from "@/components/common/buttonCTA";
 import { ButtonCTATop } from "@/components/common/buttonCTATop";
 import { CardSmall } from "@/components/common/cardSmall";
@@ -10,13 +10,6 @@ import Image from "next/image";
 import { PiToggleRightFill } from "react-icons/pi";
 import { MdOutlineToggleOff } from "react-icons/md";
 
-
-
-
-
-
-
-
 import { CardMethodology } from "@/components/common/cardMethodology";
 import { CardFAQ } from "@/components/common/cardFAQ";
 import { FAQ } from "@/faq";
@@ -26,73 +19,88 @@ import { useState } from "react";
 import Link from "next/link";
 
 export default function Home() {
-  const [finish, setFinish] = useState(false)
-  const faq = FAQ
+  const [finish, setFinish] = useState(false);
+  const faq = FAQ;
 
-  const listener = async (event: { origin: string; type: string; data: { video: string, message: string; currentTime: number; }; }) => {
+  const listener = async (event: {
+    origin: string;
+    type: string;
+    data: { video: string; message: string; currentTime: number };
+  }) => {
+    if (event.origin !== "https://player-vz-350c0f87-16f.tv.pandavideo.com.br")
+      return;
+    if (event.type != "message") return;
 
-    if (event.origin !== "https://player-vz-350c0f87-16f.tv.pandavideo.com.br") return;
-    if (event.type != 'message') return
-   
-    if ("9ea90f5c-f12b-4a91-a1f3-f615440229d9" != event.data?.video) return
-    if (finish) return
+    if ("9ea90f5c-f12b-4a91-a1f3-f615440229d9" != event.data?.video) return;
+    if (finish) return;
 
     if (event.data?.message == "panda_ended") {
-      console.log(`ended`)
-      setFinish(true)
+      console.log(`ended`);
+      setFinish(true);
       setTimeout(() => {
-        var element = document.getElementById('section-page');
+        var element = document.getElementById("section-page");
         element?.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-          inline: 'nearest'
+          behavior: "smooth",
+          block: "start",
+          inline: "nearest",
         });
-      })
+      });
     }
-  }
+  };
 
   const addListener = () => {
-
     if (typeof window !== "undefined") {
-
-      window.addEventListener(
-        "message",
-        listener,
-        false,
-      );
-
+      window.addEventListener("message", listener, false);
     }
-  }
-  addListener()
+  };
+  addListener();
   return (
-    <div className="bg-gradient-to-tr from-bgDark to-bgLight min-w-[337px] ">
+    <div className="flex flex-col bg-gradient-to-tr from-bgDark to-bgLight min-w-[337px] ">
       <Header />
       <div
-        className="flex justify-center items-start h-screen  "
+        className="flex justify-center items-start h-screen px-4 pb-10 "
         id="section-video"
       >
+       
         <iframe
+          id="panda-4466bf93-803d-4bcb-8656-285a811eb697"
+          src="https://player-vz-350c0f87-16f.tv.pandavideo.com.br/embed/?v=4466bf93-803d-4bcb-8656-285a811eb697"
+          style={{ border: "none" }}
+          allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
+          allowFullScreen={true}
+        width="100%"
+        height="100%"
+         className="rounded-md laptop:max-w-[1080px] max-h-[720px] tablet:hidden "
+          data-fetchpriority="high"
+        ></iframe>
+
+
+
+          <iframe
           id="panda-224758e4-4a95-4622-ab07-153ef8583e62"
           src="https://player-vz-350c0f87-16f.tv.pandavideo.com.br/embed/?v=9ea90f5c-f12b-4a91-a1f3-f615440229d9"
           style={{ border: "none" }}
           allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
           allowFullScreen={true}
-          className="h-[auto] w-[auto] tablet:h-[360px] tablet:w-[720px] macair:w-[1240px] macair:h-[720px] desktop:h-[720px] desktop:w-[1440px] rounded-md "
+          height="100%"
+          width="100%"
+          className=" rounded-md  laptop:max-w-[1080px] max-h-[720px] max-tablet:hidden "
           data-fetchpriority="high"
-        ></iframe>
+        ></iframe>  
       </div>
-      {finish ?
+      {finish ? (
         <div>
           <div id="section-page" className="pt-12">
             <div>
               <div className="bg-white flex flex-col items-center justify-center gap-2 py-10 ">
                 <ButtonCTATop btnName="QUERO ME INSCREVER" />
                 <h2 className="text-black font-bold text-center w-[300px] text-lg tablet:text-xl tablet:w-[400px] laptop:text-2xl laptop:w-[450px] macair:text-3xl macair:w-[550px] desktop:text-4xl desktop:w-[600px] macair:mt-12 mt-8">
-                  O único lugar capaz de levar a sua carreira para o próximo nível.
+                  O único lugar capaz de levar a sua carreira para o próximo
+                  nível.
                 </h2>
                 <p className="text-black text-xs text-center laptop:w-[480px] laptop:text-base macair:w-[550px] tablet:w-[350px] tablet:text-sm mobileL:w-[320px] w-[280px]">
-                  A primeira escola do Brasil com um conteúdo prático e com foco na
-                  formação dos profissionais mais bem pagos do mercado de
+                  A primeira escola do Brasil com um conteúdo prático e com foco
+                  na formação dos profissionais mais bem pagos do mercado de
                   tecnologia.
                 </p>
               </div>
@@ -130,7 +138,7 @@ export default function Home() {
                     imgAvatar={["reginaAvatar", "pedroAvatar"]}
                     penultimateNameProf="Regina Pedroso"
                     lastNameProf="Pedro Magalhões"
-                    cards={['rwa', 'tokenizacaoimboliaria']}
+                    cards={["rwa", "tokenizacaoimboliaria"]}
                   />
                   <CourseCard
                     nameTag="Curso 2"
@@ -141,7 +149,11 @@ export default function Home() {
                     namesProf={["Lucas Oliveira"]}
                     penultimateNameProf="Afonso Dalvi"
                     lastNameProf="Pedro Magalhões"
-                    cards={['introducaosmartcontracts', 'vunerabilidadesnartcontracts', 'rust101']}
+                    cards={[
+                      "introducaosmartcontracts",
+                      "vunerabilidadesnartcontracts",
+                      "rust101",
+                    ]}
                   />
                   <CourseCard
                     nameTag="Curso 3"
@@ -151,7 +163,11 @@ export default function Home() {
                     imgAvatar={["pedroAvatar", "caioAvatar"]}
                     penultimateNameProf="Pedro Magalhões"
                     lastNameProf="Caio Mattos"
-                    cards={['criacaodex', 'dominandoarbitrum', 'desenvolvimentoweb3']}
+                    cards={[
+                      "criacaodex",
+                      "dominandoarbitrum",
+                      "desenvolvimentoweb3",
+                    ]}
                   />
                   <CourseCard
                     nameTag="Curso 4"
@@ -174,8 +190,8 @@ export default function Home() {
                     Inteligência Artificial
                   </h2>
                   <p className="text-text-netraul text-center w-[300px]">
-                    Domine a Inteligência Artificial e monetize seu conhecimento na
-                    era digital.
+                    Domine a Inteligência Artificial e monetize seu conhecimento
+                    na era digital.
                   </p>
                 </div>
                 <div className="flex flex-col items-center gap-8 laptop:flex-row">
@@ -267,7 +283,10 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col items-center bg-white">
-              <Link href={"/#plan"} className="flex justify-center items-center w-[280px] laptop:w-[403px] h-[55px] laptop:h-[92px] bg-primary-default hover:bg-primary-hover font-bold text-white laptop:text-xl text-sm rounded-md -mt-[32px] laptop:-mt-[52px]">
+              <Link
+                href={"/#plan"}
+                className="flex justify-center items-center w-[280px] laptop:w-[403px] h-[55px] laptop:h-[92px] bg-primary-default hover:bg-primary-hover font-bold text-white laptop:text-xl text-sm rounded-md -mt-[32px] laptop:-mt-[52px]"
+              >
                 QUERO ME INSCREVER
               </Link>
             </div>
@@ -277,30 +296,36 @@ export default function Home() {
               </h2>
               <div className="flex flex-col laptop:flex-row items-center gap-8 macair:w-[1110px] laptop:px-8">
                 <div className="flex justify-center items-center w-[300px] h-[400px]  laptop:w-full">
-                  <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/selo.png" alt="" width={300} height={400} />
+                  <Image
+                    src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/selo.png"
+                    alt=""
+                    width={300}
+                    height={400}
+                  />
                 </div>
                 <div className="flex flex-col gap-8 w-[280px] tablet:w-[680px] laptop:w-full ">
                   <p className="text-justify font-bold">
-                    Entendemos que sua confiança em nós exige mais do que palavras -
-                    exige uma promessa inabalável.
+                    Entendemos que sua confiança em nós exige mais do que
+                    palavras - exige uma promessa inabalável.
                   </p>
                   <p className="text-justify">
-                    Estamos 100% comprometidos com seu resultado e esperamos o mesmo
-                    de você. Se você assistir todas as aulas e mentorias, participar
-                    de todos exercícios - e se, mesmo assim, ao final de um ano,
-                    sentir que não alcançou os resultados prometidos,
+                    Estamos 100% comprometidos com seu resultado e esperamos o
+                    mesmo de você. Se você assistir todas as aulas e mentorias,
+                    participar de todos exercícios - e se, mesmo assim, ao final
+                    de um ano, sentir que não alcançou os resultados prometidos,
                     <strong>
                       {" "}
-                      nós honraremos nosso compromisso com a mais completa garantia
-                      do mercado e devolvemos 100% do seu dinheiro.
+                      nós honraremos nosso compromisso com a mais completa
+                      garantia do mercado e devolvemos 100% do seu dinheiro.
                     </strong>
                   </p>
                   <p className="text-justify">
-                    Por que oferecemos isso? Porque cada elemento do nosso programa
-                    foi meticulosamente desenhado para colocá-lo na fronteira do
-                    conhecimento em blockchain, Web3 e tecnologias emergentes. Nossa
-                    confiança é total - na qualidade do nosso programa, na expertise
-                    dos nossos mentores e, o mais importante, em você.
+                    Por que oferecemos isso? Porque cada elemento do nosso
+                    programa foi meticulosamente desenhado para colocá-lo na
+                    fronteira do conhecimento em blockchain, Web3 e tecnologias
+                    emergentes. Nossa confiança é total - na qualidade do nosso
+                    programa, na expertise dos nossos mentores e, o mais
+                    importante, em você.
                   </p>
                 </div>
               </div>
@@ -310,18 +335,58 @@ export default function Home() {
                 Parceiros comerciais, Stacks e Redes
               </h3>
               <p className="text-text-netraul text-justify px-8 laptop:w-[700px] laptop:text-center laptop:text-xl">
-                Conheça as principais empresas que confiam em nossa plataforma e as
-                principais redes e stacks que usamos.
+                Conheça as principais empresas que confiam em nossa plataforma e
+                as principais redes e stacks que usamos.
               </p>
               <div className="flex flex-col gap-6 macair:flex macair:flex-row tablet:grid tablet:grid-cols-4 px-4 laptop:gap-8  ">
-                <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/openai.png" alt="" width={105} height={28} />
-                <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/ethereum.png" alt="" width={105} height={28}/>
-                <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/polygon.png" alt="" width={105} height={28} />
-                <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/optism.png" alt="" width={105} height={28} />
-                <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/binance.png" alt="" width={105} height={28} />
-                <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/inovabra.png" alt="" width={105} height={28} />
-                <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/solana.png" alt="" width={105} height={28} />
-                <Image src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/icp.png" alt="" width={105} height={28} />
+                <Image
+                  src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/openai.png"
+                  alt=""
+                  width={105}
+                  height={28}
+                />
+                <Image
+                  src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/ethereum.png"
+                  alt=""
+                  width={105}
+                  height={28}
+                />
+                <Image
+                  src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/polygon.png"
+                  alt=""
+                  width={105}
+                  height={28}
+                />
+                <Image
+                  src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/optism.png"
+                  alt=""
+                  width={105}
+                  height={28}
+                />
+                <Image
+                  src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/binance.png"
+                  alt=""
+                  width={105}
+                  height={28}
+                />
+                <Image
+                  src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/inovabra.png"
+                  alt=""
+                  width={105}
+                  height={28}
+                />
+                <Image
+                  src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/solana.png"
+                  alt=""
+                  width={105}
+                  height={28}
+                />
+                <Image
+                  src="https://nearxschool.s3.us-east-2.amazonaws.com/lp/icp.png"
+                  alt=""
+                  width={105}
+                  height={28}
+                />
               </div>
             </div>
             <div className="py-14 flex flex-col gap-8" id="plan">
@@ -338,13 +403,17 @@ export default function Home() {
 
                   <div className="flex flex-col items-center gap-8 pb-8">
                     <div className="flex flex-col items-center">
-                      <h4 className="text-white font-bold text-xl laptop:text-3xl">Vitalício</h4>
+                      <h4 className="text-white font-bold text-xl laptop:text-3xl">
+                        Vitalício
+                      </h4>
                       <p className="text-text-netraul">Acesso vitalício à:</p>
                     </div>
                     <div className="flex flex-col gap-4">
                       <div className="flex items-center gap-2">
                         <PiToggleRightFill color="#7331fe" size={30} />
-                        <span className="text-white">Cursos e certificações</span>
+                        <span className="text-white">
+                          Cursos e certificações
+                        </span>
                       </div>
                       <div className="flex items-center gap-2">
                         <PiToggleRightFill color="#7331fe" size={30} />
@@ -352,7 +421,9 @@ export default function Home() {
                       </div>
                       <div className="flex items-center gap-2">
                         <PiToggleRightFill color="#7331fe" size={30} />
-                        <span className="text-white">Atualizações e melhorias</span>
+                        <span className="text-white">
+                          Atualizações e melhorias
+                        </span>
                       </div>
                       <div className="flex items-center gap-2">
                         <PiToggleRightFill color="#7331fe" size={30} />
@@ -364,21 +435,30 @@ export default function Home() {
                       </div>
                       <div className="flex items-center gap-2">
                         <PiToggleRightFill color="#7331fe" size={30} />
-                        <span className="text-white">Call de consultoria (60min)</span>
+                        <span className="text-white">
+                          Call de consultoria (60min)
+                        </span>
                       </div>
                     </div>
                     <div className="flex flex-col items-center h-[100px]">
-                      <p className="text-text-netraul text-sm line-through">De: R$ 7.320,99</p>
+                      <p className="text-text-netraul text-sm line-through">
+                        De: R$ 7.320,99
+                      </p>
                       <small className="text-white text-xs">Por:</small>
                       <div className="flex items-center text-white gap-1">
-                        <small>12x</small><span className="font-bold text-4xl laptop:text-5xl">R$ 359,99</span>
+                        <small>12x</small>
+                        <span className="font-bold text-4xl laptop:text-5xl">
+                          R$ 359,99
+                        </span>
                       </div>
-
-
                     </div>
                     <div>
-                      <a href="https://payment.nearx.com.br/checkout?planId=2"
-                        className="text-white font-bold bg-primary-default hover:bg-primary-hover rounded-md px-6 py-3 laptop:px-10 laptop:py-4">Assinar agora</a>
+                      <a
+                        href="https://payment.nearx.com.br/checkout?planId=2"
+                        className="text-white font-bold bg-primary-default hover:bg-primary-hover rounded-md px-6 py-3 laptop:px-10 laptop:py-4"
+                      >
+                        Assinar agora
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -391,13 +471,17 @@ export default function Home() {
 
                   <div className="flex flex-col items-center gap-8 pb-8">
                     <div className="flex flex-col items-center">
-                      <h4 className="text-white font-bold text-xl laptop:text-3xl">Premium</h4>
+                      <h4 className="text-white font-bold text-xl laptop:text-3xl">
+                        Premium
+                      </h4>
                       <p className="text-text-netraul">Acesso anual à:</p>
                     </div>
                     <div className="flex flex-col gap-4">
                       <div className="flex items-center gap-2">
                         <PiToggleRightFill color="#7331fe" size={30} />
-                        <span className="text-white">Cursos e certificações</span>
+                        <span className="text-white">
+                          Cursos e certificações
+                        </span>
                       </div>
                       <div className="flex items-center gap-2">
                         <PiToggleRightFill color="#7331fe" size={30} />
@@ -405,7 +489,9 @@ export default function Home() {
                       </div>
                       <div className="flex items-center gap-2">
                         <PiToggleRightFill color="#7331fe" size={30} />
-                        <span className="text-white">Atualizações e melhorias</span>
+                        <span className="text-white">
+                          Atualizações e melhorias
+                        </span>
                       </div>
                       <div className="flex items-center gap-2">
                         <PiToggleRightFill color="#7331fe" size={30} />
@@ -417,30 +503,42 @@ export default function Home() {
                       </div>
                       <div className="flex items-center gap-2">
                         <MdOutlineToggleOff color="#7331fe" size={30} />
-                        <span className="text-white line-through">Call de consultoria (60min)</span>
+                        <span className="text-white line-through">
+                          Call de consultoria (60min)
+                        </span>
                       </div>
                     </div>
                     <div className="flex flex-col items-center h-[100px]">
-                      <p className="text-text-netraul text-sm line-through">De: R$ 3.865,99</p>
+                      <p className="text-text-netraul text-sm line-through">
+                        De: R$ 3.865,99
+                      </p>
                       <small className="text-white text-xs">Por:</small>
                       <div className="flex flex-col items-center text-white gap-1">
-                        <p className="font-bold text-4xl laptop:text-5xl">R$ 159,99</p>
-                        <small className="text-text-netraul">mensais no plano anual</small>
+                        <p className="font-bold text-4xl laptop:text-5xl">
+                          R$ 159,99
+                        </p>
+                        <small className="text-text-netraul">
+                          mensais no plano anual
+                        </small>
                       </div>
-
-
                     </div>
                     <div>
-                      <a href="https://payment.nearx.com.br/checkout?planId=6"
-                        className="text-white font-bold bg-primary-default hover:bg-primary-hover rounded-md px-6 py-3 laptop:px-10 laptop:py-4">Assinar agora</a>
+                      <a
+                        href="https://payment.nearx.com.br/checkout?planId=6"
+                        className="text-white font-bold bg-primary-default hover:bg-primary-hover rounded-md px-6 py-3 laptop:px-10 laptop:py-4"
+                      >
+                        Assinar agora
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="flex flex-col items-center py-14 gap-12" id="faq">
-              <h3 className="text-white text-2xl laptop:text-6xl font-bold">FAQ</h3>
-              <div className="flex flex-col  w-full gap-4 max-w-[1110px] px-10" >
+              <h3 className="text-white text-2xl laptop:text-6xl font-bold">
+                FAQ
+              </h3>
+              <div className="flex flex-col  w-full gap-4 max-w-[1110px] px-10">
                 {faq.map(({ id, question, answer }) => (
                   <CardFAQ key={id} title={question} text={answer} />
                 ))}
@@ -456,11 +554,14 @@ export default function Home() {
             <Footer />
           </div>
           <div className="flex flex-col items-center w-full ">
-            <p className="text-text-netraul border-t-[0.03rem] border-gray-600 w-[90%] text-xs text-center py-4" >NearX 2023 © Todos os direitos reservados</p>
+            <p className="text-text-netraul border-t-[0.03rem] border-gray-600 w-[90%] text-xs text-center py-4">
+              NearX 2023 © Todos os direitos reservados
+            </p>
           </div>
         </div>
-        : <></>
-      }
+      ) : (
+        <></>
+      )}
     </div>
   );
 }
