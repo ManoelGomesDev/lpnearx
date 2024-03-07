@@ -18,6 +18,19 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" type='image/x-icon' />
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-267T57WMGX"></script>
+
+        <script>
+          {`
+           window.dataLayer = window.dataLayer || [];
+           function gtag(){dataLayer.push(arguments);}
+           gtag('js', new Date());
+         
+           gtag('config', 'G-267T57WMGX');
+          `}
+        </script>
+
         <script type='text/javascript' async dangerouslySetInnerHTML={{
           __html: `
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
