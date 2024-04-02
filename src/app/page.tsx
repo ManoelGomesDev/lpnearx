@@ -18,6 +18,7 @@ import { Footer } from "@/components/footer";
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Countdown from "@/components/counterDown";
 
 export default function Home() {
   const [finish, setFinish] = useState(false);
@@ -102,7 +103,7 @@ export default function Home() {
           data-fetchpriority="high"
         ></iframe>  
       </div>
-      {finish ? (
+      {!finish ? (
         <div>
           <div id="section-page" className="pt-12">
             <div>
@@ -408,21 +409,22 @@ export default function Home() {
                 Opções de assinaturas
               </h3>
               <div className="flex flex-col gap-8 items-center laptop:flex-row laptop:justify-center">
-                <div className="bg-gradient-to-b from-bgCourseCardFrom to-bgCourseCardTo bg-opacity-10 min-w-[280px]  mx-8 rounded-lg flex flex-col  items-center justify-center   gap-8 shadow-lg shadow-purple-500 tablet:min-w-[458px] max-w-[458px]">
+              
+                <div className=" bg-gradient-to-b from-bgCourseCardFrom to-bgCourseCardTo bg-opacity-10 min-w-[280px]  mx-8 rounded-lg flex flex-col  items-center   gap-8 shadow-lg shadow-purple-500 tablet:min-w-[458px] max-w-[458px] h-[800px]">
+            
                   <div className="bg-red-600 h-10 rounded-t-md w-full  flex justify-center items-center">
-                    <span className="text-white font-bold">
-                      Último mês disponível
-                    </span>
+                    <span className="text-white font-bold">Plano com IA</span>
                   </div>
-
-                  <div className="flex flex-col items-center gap-8 pb-8">
+                  <Countdown  />
+                  <div className="flex flex-col items-center justify-between h-full pb-8">
+               
                     <div className="flex flex-col items-center">
                       <h4 className="text-white font-bold text-xl laptop:text-3xl">
-                        Vitalício
+                        Fênix
                       </h4>
-                      <p className="text-text-netraul">Acesso vitalício à:</p>
+                      <p className="text-text-netraul">Acesso anual à:</p>
                     </div>
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-4 h-[300px]">
                       <div className="flex items-center gap-2">
                         <PiToggleRightFill color="#7331fe" size={30} />
                         <span className="text-white">
@@ -453,44 +455,55 @@ export default function Home() {
                           Call de consultoria (60min)
                         </span>
                       </div>
+                      <div className="flex items-center gap-2">
+                        <PiToggleRightFill color="#7331fe" size={30} />
+                        <span className="text-white">
+                          Fênix (IA proprietária)
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex flex-col items-center h-[100px]">
+                    <div className="flex flex-col items-center h-[150px]">
                       <p className="text-text-netraul text-sm line-through">
                         De: R$ 7.320,99
                       </p>
                       <small className="text-white text-xs">Por:</small>
-                      <div className="flex items-center text-white gap-1">
-                        <small>12x</small>
-                        <span className="font-bold text-4xl laptop:text-5xl">
-                          R$ 359,99
-                        </span>
+                      <div className="flex flex-col items-center text-white gap-1">
+                        <p className="font-bold text-4xl laptop:text-5xl">
+                          R$ 159,99
+                        </p>
+                        <small className="text-text-netraul">
+                          mensais no plano anual
+                        </small>
                       </div>
                     </div>
                     <div>
+                      <button>
                       <a
-                        href="https://payment.nearx.com.br/checkout?planId=2"
+                        href="https://payment.nearx.com.br/checkout?planId=7"
                         className="text-white font-bold bg-primary-default hover:bg-primary-hover rounded-md px-6 py-3 laptop:px-10 laptop:py-4"
                       >
                         Assinar agora
                       </a>
+                      </button>
                     </div>
                   </div>
                 </div>
-                <div className=" bg-gradient-to-b from-bgCourseCardFrom to-bgCourseCardTo bg-opacity-10  mx-8 min-w-[280px] rounded-lg flex flex-col  items-center justify-center   gap-8 shadow-lg shadow-purple-500 tablet:min-w-[458px] max-w-[458px]">
+                <div className=" bg-gradient-to-b from-bgCourseCardFrom to-bgCourseCardTo bg-opacity-10  mx-8 min-w-[280px] rounded-lg flex flex-col  items-center   gap-8 shadow-lg shadow-purple-500 tablet:min-w-[458px] max-w-[458px] h-[800px]">
                   <div className="bg-primary-default h-10 rounded-t-lg w-full flex justify-center items-center">
                     <span className="text-white font-bold">
                       Plano mais popular
                     </span>
                   </div>
+                <div className="h-[30px]"></div>
 
-                  <div className="flex flex-col items-center gap-8 pb-8">
-                    <div className="flex flex-col items-center">
+                  <div className="flex flex-col items-center pb-8 justify-between h-full">
+                    <div className="flex flex-col  items-center ">
                       <h4 className="text-white font-bold text-xl laptop:text-3xl">
                         Premium
                       </h4>
                       <p className="text-text-netraul">Acesso anual à:</p>
                     </div>
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col justify-center gap-4 h-[300px]">
                       <div className="flex items-center gap-2">
                         <PiToggleRightFill color="#7331fe" size={30} />
                         <span className="text-white">
@@ -535,15 +548,19 @@ export default function Home() {
                           mensais no plano anual
                         </small>
                       </div>
+                 
                     </div>
                     <div>
+                      <button>
                       <a
                         href="https://payment.nearx.com.br/checkout?planId=6"
                         className="text-white font-bold bg-primary-default hover:bg-primary-hover rounded-md px-6 py-3 laptop:px-10 laptop:py-4"
                       >
                         Assinar agora
                       </a>
+                      </button>
                     </div>
+              
                   </div>
                 </div>
               </div>
