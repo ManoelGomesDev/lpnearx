@@ -103,7 +103,7 @@ export default function Home() {
           data-fetchpriority="high"
         ></iframe>  
       </div>
-      {!finish ? (
+      {finish ? (
         <div>
           <div id="section-page" className="pt-12">
             <div>
