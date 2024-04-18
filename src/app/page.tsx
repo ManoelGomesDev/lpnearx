@@ -415,7 +415,7 @@ export default function Home() {
                   <div className="bg-red-600 h-10 rounded-t-md w-full  flex justify-center items-center">
                     <span className="text-white font-bold">Plano com IA</span>
                   </div>
-                  <Countdown  />
+                  {/* <Countdown  /> */}
                   <div className="flex flex-col items-center justify-between h-full pb-8">
                
                     <div className="flex flex-col items-center">
@@ -469,7 +469,7 @@ export default function Home() {
                       <small className="text-white text-xs">Por:</small>
                       <div className="flex flex-col items-center text-white gap-1">
                         <p className="font-bold text-4xl laptop:text-5xl">
-                          R$ 159,99
+                          R$ 259,99
                         </p>
                         <small className="text-text-netraul">
                           mensais no plano anual
@@ -494,7 +494,7 @@ export default function Home() {
                       Plano mais popular
                     </span>
                   </div>
-                <div className="h-[30px]"></div>
+                {/* <div className="h-[30px]"></div> */}
 
                   <div className="flex flex-col items-center pb-8 justify-between h-full">
                     <div className="flex flex-col  items-center ">
