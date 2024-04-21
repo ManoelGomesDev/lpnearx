@@ -553,7 +553,7 @@ export default function Home() {
                     <div>
                       <button>
                       <a
-                        href="https://payment.nearx.com.br/checkout?planId=6"
+                        href="https://payment.nearx.com.br/checkout?planId=8"
                         className="text-white font-bold bg-primary-default hover:bg-primary-hover rounded-md px-6 py-3 laptop:px-10 laptop:py-4"
                       >
                         Assinar agora
