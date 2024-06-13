@@ -2,7 +2,7 @@
 
 export const ButtonWhatsap = () => {
   const handleWhatsappClick = () => {
-    const phoneNumber = "+5521987557253";
+    const phoneNumber = "+5511933434718";
     const message = "Olá, quero saber mais sobre a plataforma!"; // Substitua pelo número de telefone desejado
 
     // Abre o link do WhatsApp no navegador
